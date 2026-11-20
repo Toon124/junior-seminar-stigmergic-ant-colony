@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.csv
+sim_backup*.py 
+plots_backup*.py
