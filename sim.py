@@ -4,6 +4,7 @@ import random
 import numpy as np
 import csv
 import sys
+import os
 
 #World & colony settings (feel free to change!)
 SEED = 0
@@ -37,6 +38,7 @@ if len(sys.argv) == 3:
     PHEROMONES_ON = sys.argv[2] == "on"
     SHOW_GRID = False
     LOG_FILE = f"results/seed{SEED}_{sys.argv[2]}.csv"
+    os.makedirs("results", exist_ok=True)
 
 
 random.seed(SEED)
