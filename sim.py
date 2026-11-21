@@ -229,6 +229,11 @@ with open(LOG_FILE, "w", newline="") as f:
             food_left += pile["amount"]
 
         writer.writerow([tick, deliveries, carrying, food_left])
+        
+        #Prints the grid every 100 ticks so you can watch the trails form
+        if SHOW_GRID and tick % 100 == 0 and tick != RELOCATE_TICK and tick != TICKS:
+            print(f"Tick {tick}: {deliveries} deliveries")
+            print_grid()
 
 if SHOW_GRID:
     print(f"Tick {TICKS}")
